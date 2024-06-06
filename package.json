@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tw:build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "tw:watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "browser-sync": "browser-sync start --server --files 'dist/*.css' --no-notify"
   },
   "author": "",
   "license": "ISC",
