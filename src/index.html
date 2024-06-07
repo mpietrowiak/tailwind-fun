@@ -6,6 +6,14 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuIcon = document.getElementById("mobile-menu-button");
+        mobileMenuIcon.addEventListener("click", () => {
+          mobileMenuIcon.classList.toggle("open");
+        });
+      };
+    </script>
   </head>
   <body>
     <main>
@@ -24,12 +32,21 @@
             </div>
           </div>
 
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="my-auto ml-auto block pr-4 md:hidden">
+            <button id="mobile-menu-button" class="group block cursor-pointer">
+              <div
+                class="relative top-0 h-1 w-8 bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
+              ></div>
+              <div
+                class="mt-1 h-1 w-8 bg-zinc-200 transition-all group-open:opacity-0"
+              ></div>
+              <div
+                class="relative top-0 mt-1 h-1 w-8 bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
+              ></div>
+            </button>
+          </div>
 
-          <div class="flex flex-1 items-center justify-end">
+          <div class="hidden flex-1 items-center justify-end md:flex">
             <div class="menu-item">
               <span>Home</span>
             </div>
