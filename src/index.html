@@ -33,7 +33,10 @@
           </div>
 
           <div class="my-auto ml-auto block pr-4 md:hidden">
-            <button id="mobile-menu-button" class="group block cursor-pointer">
+            <button
+              id="mobile-menu-button"
+              class="peer group block cursor-pointer"
+            >
               <div
                 class="relative top-0 h-1 w-8 bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
               ></div>
@@ -44,6 +47,12 @@
                 class="relative top-0 mt-1 h-1 w-8 bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
               ></div>
             </button>
+
+            <div
+              class="absolute left-0 top-[62px] hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
+            >
+              mobile menu
+            </div>
           </div>
 
           <div class="hidden flex-1 items-center justify-end md:flex">
