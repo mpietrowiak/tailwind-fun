@@ -17,6 +17,20 @@
         ticketsMenuItem.addEventListener("click", () => {
           ticketsMenuItem.classList.toggle("open");
         });
+
+        const previousButton = document.getElementById("previous");
+        const nextButton = document.getElementById("next");
+        const carousel = document.getElementById("carousel");
+
+        nextButton.addEventListener("click", () => {
+          const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
+          carousel.scrollLeft += itemWidth;
+        });
+
+        previousButton.addEventListener("click", () => {
+          const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
+          carousel.scrollLeft -= itemWidth;
+        });
       };
     </script>
   </head>
@@ -190,62 +204,82 @@
           deserunt maxime error reiciendis aliquid necessitatibus amet,
           obcaecati fuga eaque quia optio, dolorem possimus minima dignissimos
         </p>
-        <div class="mt-4 flex w-full snap-x gap-4 overflow-x-auto pb-5">
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band1.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
+
+        <div class="flex">
+          <div
+            id="previous"
+            class="relative -top-8 flex cursor-pointer items-center justify-center p-2 text-5xl"
+          >
+            <i class="fas fa-angle-left"></i>
           </div>
-          <div class="min-w-[80%] md:min-w-[40%]">
+          <div>
             <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band2.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
+              id="carousel"
+              class="mt-4 flex w-full flex-1 snap-x gap-4 overflow-x-auto scroll-smooth pb-5"
+            >
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band1.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band2.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band3.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band4.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band5.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band6.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+              <div class="min-w-[80%] md:min-w-[40%]">
+                <div
+                  class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+                  style="background-image: url('./assets/images/band7.jpg')"
+                ></div>
+                <h5 class="mt-2">Corduroy Gary</h5>
+                <h6>1st July 9pm - Main Stage</h6>
+              </div>
+            </div>
           </div>
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band3.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
-          </div>
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band4.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
-          </div>
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band5.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
-          </div>
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band6.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
-          </div>
-          <div class="min-w-[80%] md:min-w-[40%]">
-            <div
-              class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
-              style="background-image: url('./assets/images/band7.jpg')"
-            ></div>
-            <h5 class="mt-2">Corduroy Gary</h5>
-            <h6>1st July 9pm - Main Stage</h6>
+          <div
+            id="next"
+            class="relative -top-8 flex cursor-pointer items-center justify-center p-2 text-5xl"
+          >
+            <i class="fas fa-angle-right"></i>
           </div>
         </div>
       </div>
