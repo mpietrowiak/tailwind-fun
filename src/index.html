@@ -31,14 +31,26 @@
           const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
           carousel.scrollLeft -= itemWidth;
         });
+
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        darkModeToggle.addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+        });
       };
     </script>
   </head>
-  <body>
+  <body class="dark">
     <main class="bg-zinc-200 dark:bg-zinc-900">
       <header class="text-zinc-200">
+        <button
+          id="dark-mode-toggle"
+          class="fixed top-24 right-0 inline-block cursor-pointer rounded-l-lg bg-zinc-900 p-2 text-3xl text-zinc-200 dark:bg-zinc-200 dark:text-zinc-900"
+        >
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+        </button>
         <nav
-          class="sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+          class="sticky top-0 z-10 flex bg-gradient-to-r from-rose-500 to-pink-500"
         >
           <div class="flex items-center gap-2 p-2">
             <img
@@ -284,6 +296,34 @@
             <i class="fas fa-angle-right"></i>
           </div>
         </div>
+
+        <h2 class="mt-20">Tickets</h2>
+
+        <table class="mt-5 table w-full border-collapse border-zinc-500">
+          <thead class="text-lg font-bold">
+            <tr>
+              <th class="border border-zinc-500 p-3">Tickets</th>
+              <th class="border border-zinc-500 p-3">Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td class="border border-zinc-500 py-2 px-3">
+                Single day ticket
+              </td>
+              <td class="border border-zinc-500 py-2 px-3">$30</td>
+            </tr>
+
+            <tr>
+              <td class="border border-zinc-500 py-2 px-3">7 day ticket</td>
+              <td class="border border-zinc-500 py-2 px-3">$100</td>
+            </tr>
+          </tbody>
+          <caption class="caption-bottom">
+            Once they're gone, they're gone!
+          </caption>
+        </table>
       </div>
     </main>
   </body>
